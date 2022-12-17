@@ -79,7 +79,7 @@ export default{
                 <input v-model="product.name" type="text" class="form-control">
               </div>
               <div class="form-group mt-2">
-                <label>quantidade</label>
+                <label>Quatidade</label>
                 <input v-model="product.quantity" type="number" class="form-control">
               </div>
               <div class="form-group mt-2">

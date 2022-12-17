@@ -6,7 +6,7 @@ import {api} from "../api/index";
       return{
         products: [],
         cart: [],
-        listProducts: {},
+        listProducts: [],
         price: 0
       }
     },
@@ -27,8 +27,13 @@ import {api} from "../api/index";
       },
 
       async checkout(products){
-        products.map(({id, price}) =>  this.listProducts = {id, price});
         const user_id = localStorage.getItem("user_id").toString();
+
+        products.map(response => {
+          this.listProducts.push(response.id);
+        })
+
+        console.log(this.listProducts);
 
         products.map(e => {
           var totalValue = this.price+=e.price
@@ -38,7 +43,9 @@ import {api} from "../api/index";
         await api.post("/orders", {
           user_id,
           total: this.price,
-          products_id: this.listProducts.id
+          products_id: this.listProducts
+        }).then(() => {
+          window.location.replace("/orders");
         })
       }
     }
@@ -71,7 +78,7 @@ import {api} from "../api/index";
         </div>
         <a class="btn btn-success w-25 mt-5 container" 
           @click.prevent="checkout(cart)">
-          Finaliza compra!
+          Finalizar compra!
         </a>
       </div>
   </main>

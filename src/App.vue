@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <RouterLink class="nav-link active" to="/">Home</RouterLink>
+              <RouterLink class="nav-link active" to="/home">Home</RouterLink>
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link active" to="/shop">Shop</RouterLink>
