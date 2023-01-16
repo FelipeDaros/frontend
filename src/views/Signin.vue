@@ -29,16 +29,17 @@ export default{
 
 <template>
   <main>
-    <div class="w-50 container">
+    <div class="w-50 container ">
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
           <input v-model="user.email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
         </div>
         <div class="form-group mt-5">
-          <label for="exampleInputPassword1">Senha</label>
+          <label for="exampleInputPassword1" class="text-primary">Senha</label>
           <input v-model="user.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
+        <Button label="Secondary" class="p-button-secondary" />
         <button @click.prevent="login(user)" type="submit" class="btn btn-success mt-5">Entrar</button>
       </form>
     </div>
