@@ -4,9 +4,9 @@
       <div class="m-2 col-4">
         <h2 class="text-center">Pânico</h2>
         <DataTable :value="panico" responsiveLayout="scroll">
-          <Column field="empresa" header="Empresa"></Column>
-          <Column field="local" header="Local"></Column>
-          <Column field="data" header="Data"></Column>
+          <Column field="user.name" header="Nome"></Column>
+          <Column field="verify" header="Verificado"></Column>
+          <Column field="created_at" header="Data"></Column>
         </DataTable>
       </div>
       <div class="m-2 col-4">
@@ -34,12 +34,12 @@ export default {
   methods: {
     async buscarPanicos(){
       try {
-        const panicos = await this.api.get('/panic');
+        const panicos = await api.get('/panic');
         this.panico = panicos.data;
         console.log(panicos.data);
       } catch (error) {
         console.log(error);
-        this.$toast.add({severity:'error', summary: 'Ocorreu um erro', detail:'Não foi possível buscar os pânicos', life: 3000});
+        //this.$toast.add({severity:'error', summary: 'Ocorreu um erro', detail:'Não foi possível buscar os pânicos', life: 3000});
       }
     }
   },

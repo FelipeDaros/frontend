@@ -4,6 +4,7 @@ import PainelSeguranca from "../views/PainelSeguranca.vue";
 import Signin from "../views/Signin.vue";
 import Products from "../views/Products.vue";
 import Orders from "../views/Orders.vue";
+import indexCadastro from '../views/Cadastro/indexCadastro.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       name: "orders",
       component: Orders,
     },
+    {
+      path: '/cadastro',
+      name: 'cadastro',
+      component: indexCadastro
+    }
   ]
 })
 

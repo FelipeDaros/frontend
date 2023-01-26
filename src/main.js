@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
+import "primevue/resources/themes/tailwind-light/theme.css"
+import "primevue/resources/primevue.min.css" 
+import 'primeicons/primeicons.css';
 import App from './App.vue'
 import router from './router'
 import '/node_modules/primeflex/primeflex.css';
-import "primevue/resources/themes/saga-blue/theme.css"
-import "primevue/resources/primevue.min.css" 
 import PrimeVue from 'primevue/config';
 import AutoComplete from 'primevue/autocomplete';
 import Accordion from 'primevue/accordion';
@@ -100,6 +101,7 @@ import TreeSelect from 'primevue/treeselect';
 import TreeTable from 'primevue/treetable';
 import TriStateCheckbox from 'primevue/tristatecheckbox';
 import VirtualScroller from 'primevue/virtualscroller';
+import '/node_modules/primeflex/primeflex.css'
 const app = createApp(App).use(PrimeVue)
 
 app.use(router)
