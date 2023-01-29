@@ -27,7 +27,7 @@
       </template>
       <template #footer>
         <Button
-          @click="showDialogRelatorioRonda"
+          @click="showDialogRelatorioPanico"
           label="Relatório das rondas"
           class="p-button-success m-4 h-100"
         />
@@ -85,13 +85,16 @@
     </Card>
   </div>
   <DialogRelatorioRondas ref="dialogRelatorioRondas" />
+  <DialogRelatorioPanico ref="dialogRelatorioPanico" />
 </template>
 
 <script>
 import DialogRelatorioRondas from "./components/DialogRelatorioRondas.vue";
+import DialogRelatorioPanico from "./components/DialogRelatorioPanico.vue";
 export default {
   components: {
     DialogRelatorioRondas,
+    DialogRelatorioPanico
   },
   data() {
     return {};
@@ -100,6 +103,9 @@ export default {
     showDialogRelatorioRonda() {
       this.$refs.dialogRelatorioRondas.open();
     },
+    showDialogRelatorioPanico(){
+      this.$refs.dialogRelatorioPanico.open();
+    }
   },
 };
 </script>
