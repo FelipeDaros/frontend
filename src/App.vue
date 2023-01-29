@@ -10,31 +10,26 @@ import Toast from "primevue/toast";
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item rounded">
               <RouterLink class="nav-link active text-white" to="/home"
                 >Home</RouterLink
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item rounded">
               <RouterLink
                 class="nav-link active text-white"
                 to="/painel-seguranca"
                 >Painel Segurança</RouterLink
               >
             </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link active text-white" to="/products"
-                >Products</RouterLink
-              >
-            </li>
-            <li class="nav-item">
-              <RouterLink class="nav-link active text-white" to="/orders"
-                >Orders</RouterLink
-              >
-            </li>
-            <li class="nav-item">
+            <li class="nav-item rounded">
               <RouterLink class="nav-link active text-white" to="/cadastro"
                 >Cadastro</RouterLink
+              >
+            </li>
+            <li class="nav-item rounded">
+              <RouterLink class="nav-link active text-white" to="/relatorio"
+                >Relatorio</RouterLink
               >
             </li>
           </ul>
@@ -44,3 +39,11 @@ import Toast from "primevue/toast";
   </header>
   <RouterView />
 </template>
+
+
+<style>
+  li:hover{
+    background-color: gray;
+    transition: 1s;
+  }
+</style>

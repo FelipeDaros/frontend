@@ -1,25 +1,25 @@
 <template>
-  <div class="flex flex-row flex-wrap flex justify-content-center">
+  <div class="flex flex-row flex-wrap justify-content-center">
     <div class="mt-5">
       <Button
         @click="showDialogCadastroItem"
         label="Cadastro de equipamento"
-        class="p-button-success m-4"
+        class="p-button-success m-4 h-100"
       />
       <Button
         @click="showDialogCadastroPostoServico"
         label="Cadastrar posto de serviço"
-        class="p-button-success m-4"
+        class="p-button-success m-4 h-100"
       />
       <Button
         @click="showDialogCadastroUsuario"
         label="Cadastrar usuário"
-        class="p-button-success m-4"
+        class="p-button-success m-4 h-100"
       />
       <Button
         @click="showDialogCadastroEmpresa"
         label="Cadastrar empresa"
-        class="p-button-success m-4"
+        class="p-button-success m-4 h-100"
       />
     </div>
   </div>

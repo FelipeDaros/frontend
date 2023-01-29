@@ -2,7 +2,7 @@
   <Dialog
     :visible="display"
     :modal="true"
-    closable="false"
+    :closable="false"
     class="text-center"
     style="width: 40%"
   >
