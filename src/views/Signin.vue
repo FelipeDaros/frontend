@@ -64,6 +64,7 @@ export default {
         this.result = data;
         window.sessionStorage.setItem('user', data);
         this.$router.push('/home');
+        window.localStorage.setItem('isLogado', true);
         return this.$toast.add({
           severity: "success",
           summary: "Informação do login",
@@ -79,6 +80,6 @@ export default {
         });
       }
     },
-  },
+  }
 };
 </script>

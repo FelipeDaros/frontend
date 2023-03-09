@@ -108,7 +108,6 @@ app.use(router)
 
 app.mount('#app')
 
-
 app.use(ToastService);
 app.use(DialogService);
 app.use(ConfirmationService);

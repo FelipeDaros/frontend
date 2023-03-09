@@ -4,6 +4,7 @@ import PainelSeguranca from "../views/PainelSeguranca.vue";
 import Signin from "../views/Signin.vue";
 import indexCadastro from '../views/Cadastro/indexCadastro.vue';
 import indexRelatorio from '../views/Relatorio/indexRelatorio.vue';
+import indexGerarQRCode from '../views/GerarQRCode/indexGerarQRCode.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,7 +33,12 @@ const router = createRouter({
       path: '/relatorio',
       name: 'relatorio',
       component: indexRelatorio
-    }
+    },
+    {
+      path: '/gerar-qr-code',
+      name: 'index-gerar-qr-code',
+      component: indexGerarQRCode
+    },
   ]
 })
 
